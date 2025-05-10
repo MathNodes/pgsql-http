@@ -959,8 +959,8 @@ http_get_handle()
 
 	/* Always want a default fast (1 second) connection timeout */
 	/* User can over-ride with http_set_curlopt() if they wish */
-	curl_easy_setopt(handle, CURLOPT_CONNECTTIMEOUT_MS, 1000);
-	curl_easy_setopt(handle, CURLOPT_TIMEOUT_MS, 5000);
+	curl_easy_setopt(handle, CURLOPT_CONNECTTIMEOUT_MS, 30000);
+	curl_easy_setopt(handle, CURLOPT_TIMEOUT_MS, 35000);
 
 	/* Set the user agent. If not set, use PG_VERSION as default */
    	curl_easy_setopt(handle, CURLOPT_USERAGENT, PG_VERSION_STR);
